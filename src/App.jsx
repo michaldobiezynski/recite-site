@@ -285,7 +285,7 @@ function PasteWorkflow() {
               <div className="term-body">
                 <div style={{ display: "flex", justifyContent: "space-between", color: "var(--ink-3)", fontSize: 10 }}>
                   <span>sentence 3 / 7</span>
-                  <span style={{ color: "var(--amber)" }}>00:14 / 00:38</span>
+                  <span style={{ color: "var(--amber)" }}>00:14 / 00:43</span>
                 </div>
                 <div className="term-karaoke">
                   <ActiveKaraokeTerm />
