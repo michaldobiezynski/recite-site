@@ -354,7 +354,7 @@ function HowItWorks() {
           <h2>Three Unix-y stages. No magic.</h2>
           <p className="lede" style={{ marginTop: 16 }}>
             recite splits, synthesises, and plays in three coordinated stages. Everything happens on your
-            laptop, in a background asyncio task, in roughly 1,300 lines of Python.
+            laptop, in a background asyncio task, in roughly 1,400 lines of Python.
           </p>
         </div>
 
