@@ -162,9 +162,9 @@ function Hero() {
           <div className="install-row">
             <div className="cmd">
               <span className="dollar">$</span>
-              <span>brew install pipx &amp;&amp; pipx install recite</span>
+              <span>pipx install git+https://github.com/michaldobiezynski/recite.git</span>
               <span className="copy" onClick={(e) => {
-                navigator.clipboard?.writeText("brew install pipx && pipx install recite");
+                navigator.clipboard?.writeText("pipx install git+https://github.com/michaldobiezynski/recite.git");
                 const o = e.currentTarget.textContent;
                 e.currentTarget.textContent = "copied";
                 setTimeout(() => { if (e.currentTarget) e.currentTarget.textContent = o; }, 1200);
@@ -549,7 +549,7 @@ function Install() {
             </div>
             <div className="codecard-body">
               <div><span className="dollar">$</span><span className="b">brew install pipx</span></div>
-              <div><span className="dollar">$</span><span className="b">pipx install recite</span></div>
+              <div><span className="dollar">$</span><span className="b">pipx install</span> git+https://<br />&nbsp;&nbsp;github.com/michaldobiezynski/recite.git</div>
               <div><span className="cmnt"># done — heuristic aligner, ~0 extra deps</span></div>
             </div>
           </div>
@@ -573,7 +573,7 @@ function Install() {
             </div>
             <div className="codecard-body">
               <div><span className="dollar">$</span><span className="b">brew install espeak ffmpeg</span></div>
-              <div><span className="dollar">$</span><span className="b">pipx install 'recite[align]'</span></div>
+              <div><span className="dollar">$</span><span className="b">pipx install</span> 'git+https://github.com/<br />&nbsp;&nbsp;michaldobiezynski/recite.git[align]'</div>
               <div><span className="cmnt"># then: recite --align aeneas</span></div>
             </div>
           </div>
