@@ -45,6 +45,8 @@ a { color: inherit; text-decoration: none; }
   -webkit-backdrop-filter: blur(10px);
 }
 .brand { display:flex; align-items:center; gap: 10px; font-family: var(--mono); font-weight: 600; letter-spacing: -0.01em; }
+.brand-version { color: var(--ink-4); font-weight: 400; margin-left: 4px; }
+.nav-section { display: inline; }
 .brand .dot { width: 8px; height: 8px; background: var(--amber); border-radius: 50%; box-shadow: 0 0 12px rgba(240,160,32,0.7); }
 .nav { display:flex; align-items:center; gap: 28px; font-family: var(--mono); font-size: 13px; color: var(--ink-2); }
 .nav a:hover { color: var(--ink); }
@@ -511,3 +513,99 @@ footer { padding: 56px 0 64px; }
 
 .reveal { opacity: 0; transform: translateY(12px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.in { opacity: 1; transform: none; }
+
+/* ---- Mobile portrait (phones up to ~ iPad mini portrait) ---- */
+@media (max-width: 700px) {
+  .page { padding: 0 16px; max-width: 100%; }
+  section { padding: 56px 0; }
+
+  /* Top bar / nav */
+  .topbar { height: 56px; }
+  .topbar .page { padding: 0 16px !important; }
+  .nav { gap: 10px; font-size: 11.5px; }
+  .nav a { white-space: nowrap; }
+  .nav .pill { padding: 4px 10px; font-size: 11px; }
+  /* On phones the section nav links are noise; the page is short enough to
+     scroll. Keep only the github pill and shrink the brand version label. */
+  .nav-section { display: none; }
+  .brand-version { display: none; }
+
+  /* Type scale */
+  h1 { font-size: 36px; line-height: 1.08; }
+  h2 { font-size: 26px; line-height: 1.15; }
+  .lede { font-size: 15px; line-height: 1.55; }
+  .pitch p { font-size: 19px; line-height: 1.45; }
+
+  /* Hero */
+  .hero { padding-top: 48px; padding-bottom: 48px; }
+  .install-row { flex-direction: column; align-items: stretch; gap: 10px; margin-top: 28px; }
+  .cmd {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    line-height: 1.45;
+    font-size: 11.5px;
+    padding: 10px 14px;
+  }
+  .cmd > span:not(.dollar):not(.copy) {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .cmd .copy { align-self: flex-end; }
+  .ghbtn { justify-content: center; }
+
+  /* Karaoke widget */
+  .karaoke-stage { margin-top: 36px; }
+  .karaoke-body { padding: 22px 16px 16px; }
+  .karaoke-line { font-size: 15px; line-height: 1.5; }
+  .karaoke-meta {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 10.5px;
+    margin-bottom: 18px;
+  }
+  .term-chrome { padding: 0 12px; gap: 8px; height: 34px; }
+  .term-title { font-size: 10px; }
+  .waveform { height: 28px; margin-top: 18px; }
+  .transport {
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 12px 14px;
+    font-size: 11px;
+  }
+  .transport .left, .transport .right { gap: 8px 14px; flex-wrap: wrap; }
+  .transport .right { margin-left: 0; }
+  .kbd { gap: 5px; }
+
+  /* Workflow */
+  .workflow-grid { grid-template-columns: 1fr; }
+  .panel { min-height: 0; }
+  .section-head { margin-bottom: 32px; }
+  .mockchat { font-size: 10px; padding: 8px 10px; max-height: 140px; }
+
+  /* How it works (already 1fr at 900) — just tighten padding */
+  .how-cell { padding: 22px 18px 24px; min-height: 0; }
+
+  /* Features (already 1fr at 900) — tighten padding */
+  .feat { padding: 22px 18px; min-height: 0; }
+
+  /* Install cards */
+  .codecard-body { font-size: 11.5px; padding: 14px; overflow-wrap: anywhere; line-height: 1.65; }
+
+  /* Limits */
+  .limit { padding: 18px 20px; }
+
+  /* Footer */
+  .foot .left, .foot .right { flex-wrap: wrap; gap: 12px; }
+}
+
+/* ---- Very narrow phones ---- */
+@media (max-width: 420px) {
+  h1 { font-size: 30px; }
+  h2 { font-size: 22px; }
+  .karaoke-line { font-size: 13px; }
+  .nav { gap: 10px; font-size: 11px; }
+  .nav .pill { padding: 3px 8px; }
+}
