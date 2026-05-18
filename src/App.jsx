@@ -62,13 +62,13 @@ function TopBar() {
         <div className="brand">
           <span className="dot"></span>
           <span>recite</span>
-          <span style={{ color: "var(--ink-4)", fontWeight: 400, marginLeft: 4 }}>v0.1</span>
+          <span className="brand-version">v0.1</span>
         </div>
         <div className="nav">
-          <a href="#workflow">workflow</a>
-          <a href="#how">how it works</a>
-          <a href="#keys">keys</a>
-          <a href="#install">install</a>
+          <a className="nav-section" href="#workflow">workflow</a>
+          <a className="nav-section" href="#how">how it works</a>
+          <a className="nav-section" href="#keys">keys</a>
+          <a className="nav-section" href="#install">install</a>
           <a className="pill" href="https://github.com/michaldobiezynski/recite" target="_blank" rel="noreferrer">
             <GhIcon /> github
           </a>
