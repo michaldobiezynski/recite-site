@@ -162,9 +162,9 @@ function Hero() {
           <div className="install-row">
             <div className="cmd">
               <span className="dollar">$</span>
-              <span>brew install pipx &amp;&amp; pipx install recite</span>
+              <span>pipx install git+https://github.com/michaldobiezynski/recite.git</span>
               <span className="copy" onClick={(e) => {
-                navigator.clipboard?.writeText("brew install pipx && pipx install recite");
+                navigator.clipboard?.writeText("pipx install git+https://github.com/michaldobiezynski/recite.git");
                 const o = e.currentTarget.textContent;
                 e.currentTarget.textContent = "copied";
                 setTimeout(() => { if (e.currentTarget) e.currentTarget.textContent = o; }, 1200);
@@ -271,7 +271,7 @@ function PasteWorkflow() {
                 <div className="pasted">
                   Sure — the reason I reached for useReducer here is that the auth flow has four mutually-exclusive states<span className="caret"></span>
                 </div>
-                <div className="dim" style={{ marginTop: 8, fontSize: 10 }}>847 chars · 142 words · ~38 sec @ 200 wpm</div>
+                <div className="dim" style={{ marginTop: 8, fontSize: 10 }}>847 chars · 142 words · ~43 sec @ 200 wpm</div>
               </div>
             </div>
           </StepPanel>
@@ -285,7 +285,7 @@ function PasteWorkflow() {
               <div className="term-body">
                 <div style={{ display: "flex", justifyContent: "space-between", color: "var(--ink-3)", fontSize: 10 }}>
                   <span>sentence 3 / 7</span>
-                  <span style={{ color: "var(--amber)" }}>00:14 / 00:38</span>
+                  <span style={{ color: "var(--amber)" }}>00:14 / 00:43</span>
                 </div>
                 <div className="term-karaoke">
                   <ActiveKaraokeTerm />
@@ -354,7 +354,7 @@ function HowItWorks() {
           <h2>Three Unix-y stages. No magic.</h2>
           <p className="lede" style={{ marginTop: 16 }}>
             recite splits, synthesises, and plays in three coordinated stages. Everything happens on your
-            laptop, in a background asyncio task, in roughly 600 lines of Python.
+            laptop, in a background asyncio task, in roughly 1,400 lines of Python.
           </p>
         </div>
 
@@ -549,7 +549,7 @@ function Install() {
             </div>
             <div className="codecard-body">
               <div><span className="dollar">$</span><span className="b">brew install pipx</span></div>
-              <div><span className="dollar">$</span><span className="b">pipx install recite</span></div>
+              <div><span className="dollar">$</span><span className="b">pipx install</span> git+https://<br />&nbsp;&nbsp;github.com/michaldobiezynski/recite.git</div>
               <div><span className="cmnt"># done — heuristic aligner, ~0 extra deps</span></div>
             </div>
           </div>
@@ -573,7 +573,7 @@ function Install() {
             </div>
             <div className="codecard-body">
               <div><span className="dollar">$</span><span className="b">brew install espeak ffmpeg</span></div>
-              <div><span className="dollar">$</span><span className="b">pipx install 'recite[align]'</span></div>
+              <div><span className="dollar">$</span><span className="b">pipx install</span> 'git+https://github.com/<br />&nbsp;&nbsp;michaldobiezynski/recite.git[align]'</div>
               <div><span className="cmnt"># then: recite --align aeneas</span></div>
             </div>
           </div>
