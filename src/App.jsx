@@ -271,7 +271,7 @@ function PasteWorkflow() {
                 <div className="pasted">
                   Sure — the reason I reached for useReducer here is that the auth flow has four mutually-exclusive states<span className="caret"></span>
                 </div>
-                <div className="dim" style={{ marginTop: 8, fontSize: 10 }}>847 chars · 142 words · ~38 sec @ 200 wpm</div>
+                <div className="dim" style={{ marginTop: 8, fontSize: 10 }}>847 chars · 142 words · ~43 sec @ 200 wpm</div>
               </div>
             </div>
           </StepPanel>
@@ -354,7 +354,7 @@ function HowItWorks() {
           <h2>Three Unix-y stages. No magic.</h2>
           <p className="lede" style={{ marginTop: 16 }}>
             recite splits, synthesises, and plays in three coordinated stages. Everything happens on your
-            laptop, in a background asyncio task, in roughly 600 lines of Python.
+            laptop, in a background asyncio task, in roughly 1,300 lines of Python.
           </p>
         </div>
 
