@@ -256,7 +256,7 @@ function PasteWorkflow() {
             </div>
           </StepPanel>
 
-          <StepPanel n="03" label="paste into recite" kbd={["⌘", "V"]} caption={<><b>recite --paste</b> opens a text box. Drop the prose. <span style={{ color: "var(--amber)" }}>Ctrl+S</span> starts playback.</>}>
+          <StepPanel n="03" label="paste into recite" kbd={["⌘", "V"]} caption={<><b>recite --paste</b> opens a text box. Drop the prose. <span style={{ color: "var(--amber)" }}>Ctrl+S</span> reflows the wraps and starts playback.</>}>
             <div className="term">
               <div className="term-head">
                 <div className="l"><span></span><span></span><span></span></div>
@@ -364,7 +364,8 @@ function HowItWorks() {
             <div className="how-title">Sentence-aware chunking</div>
             <div className="how-desc">
               Input is broken into sentences with an abbreviation-aware splitter (so "Dr. Smith" stays one
-              sentence). Each chunk goes onto a synth queue.
+              sentence). Hard wraps from a producing terminal collapse first, so a copied paragraph arrives
+              whole; lists and headings keep their breaks. Each chunk goes onto a synth queue.
             </div>
             <div className="how-art how-art-1">
               <span className="sent"><span className="num">01</span>Sure — the reason I reached for useReducer here…</span>
