@@ -256,7 +256,7 @@ function PasteWorkflow() {
             </div>
           </StepPanel>
 
-          <StepPanel n="03" label="paste into recite" kbd={["⌘", "V"]} caption={<><b>recite --paste</b> opens a text box. Drop the prose. <span style={{ color: "var(--amber)" }}>Ctrl+S</span> reflows terminal soft-wraps and starts playback.</>}>
+          <StepPanel n="03" label="paste into recite" kbd={["⌘", "V"]} caption={<><b>recite --paste</b> opens a text box. Drop the prose. <span style={{ color: "var(--amber)" }}>Ctrl+S</span> reflows the wraps and starts playback.</>}>
             <div className="term">
               <div className="term-head">
                 <div className="l"><span></span><span></span><span></span></div>
@@ -364,9 +364,8 @@ function HowItWorks() {
             <div className="how-title">Sentence-aware chunking</div>
             <div className="how-desc">
               Input is broken into sentences with an abbreviation-aware splitter (so "Dr. Smith" stays one
-              sentence). Pasted text first has its terminal soft-wraps collapsed, so a copied paragraph
-              travels intact into the splitter instead of fragmenting on every 80-column wrap. Each
-              chunk goes onto a synth queue.
+              sentence). Hard wraps from a producing terminal collapse first, so a copied paragraph arrives
+              whole; lists and headings keep their breaks. Each chunk goes onto a synth queue.
             </div>
             <div className="how-art how-art-1">
               <span className="sent"><span className="num">01</span>Sure — the reason I reached for useReducer here…</span>
@@ -430,7 +429,7 @@ const FEATURES = [
   {
     glyph: "⌘V",
     title: "Built for the paste loop",
-    body: "Copy your AI's last response, paste into recite, press Ctrl+S. Hard-wraps from the terminal reflow on submit, so sentences play whole rather than in fragments. When the next one lands, Ctrl+N clears and you paste again.",
+    body: "Copy your AI's last response, paste into recite, press Ctrl+S. When the next one lands, Ctrl+N clears and you paste again. That's the whole workflow.",
     meta: "no upload · no sync · no Chrome tab",
   },
   {
